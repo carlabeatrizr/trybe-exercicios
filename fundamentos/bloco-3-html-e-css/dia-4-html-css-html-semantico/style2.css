@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    color: black;
+    background-color: rgb(43, 241, 175);
+}
+
+.links {
+    text-align: left;
+}
+
+h1,
+h2,
+h3 {
+    background-color: lightsalmon;
+
+}
+
+table {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+caption {
+    background-color: yellow;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
