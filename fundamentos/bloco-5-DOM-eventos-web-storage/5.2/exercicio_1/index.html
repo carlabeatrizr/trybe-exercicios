@@ -85,10 +85,31 @@
         elementMain.appendChild(elementSectionRight);
         //7.
         let elementImage = document.createElement("img");
+        elementImage.src = "https://picsum.photos/200";
         elementImage.className = "small-image";
         elementSectionLeft.appendChild(elementImage);
         //8.
-        
+        let elementUl = document.createElement("ul");
+        elementSectionRight.appendChild(elementUl);
+        let numbers = [
+            "Um",
+            "Dois",
+            "Três",
+            "Quatro",
+            "Cinco",
+            "Seis",
+            "Sete",
+            "Oito",
+            "Nove",
+            "Dez",
+        ];
+        for(const key in numbers){
+            let elementLi = document.createElement("li");
+            elementLi.innerText =  numbers[key];
+            elementUl.appendChild(elementLi);
+        }
+
+
 
     </script>
 </body>
