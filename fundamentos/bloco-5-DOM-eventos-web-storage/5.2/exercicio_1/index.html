@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //1.
+        let elementH1 = document.createElement("h1");
+        elementH1.innerText = "Exercício 5.2 - JavaScript DOM";
+        document.body.appendChild(elementH1);
+        //2.
+        let elementMain = document.createElement("main");
+        elementMain.className = "main-content";
+        document.body.appendChild(elementMain);
+        //3.
+        let elementSectionCenter = document.createElement("section");
+        elementSectionCenter.className = "center-content";
+        elementMain.appendChild(elementSectionCenter);
+        //4.
+        let elementP = document.createElement("p");
+        elementP.innerText = "lorem ipsum";
+        elementSectionCenter.appendChild(elementP);
+        //5.
+        let elementSectionLeft = document.createElement("section");
+        elementSectionLeft.className = "left-content";
+        elementMain.appendChild(elementSectionLeft);
+        //6.
+        let elementSectionRight = document.createElement("section");
+        elementSectionRight.className = "right-content";
+        elementMain.appendChild(elementSectionRight);
+        //7.
+        let elementImage = document.createElement("img");
+        elementImage.src = "https://picsum.photos/200";
+        elementImage.className = "small-image";
+        elementSectionLeft.appendChild(elementImage);
+        //8.
+        let elementUl = document.createElement("ul");
+        elementSectionRight.appendChild(elementUl);
+        let numbers = [
+            "Um",
+            "Dois",
+            "Três",
+            "Quatro",
+            "Cinco",
+            "Seis",
+            "Sete",
+            "Oito",
+            "Nove",
+            "Dez",
+        ];
+        for(const key in numbers){
+            let elementLi = document.createElement("li");
+            elementLi.innerText =  numbers[key];
+            elementUl.appendChild(elementLi);
+        }
+        //9.
+        for(let i = 1; i <= 3; i += 1){
+            let elementH3 = document.createElement("h3");
+            elementH3.innerText = "lorem ipsum" + i;
+            elementMain.appendChild(elementH3);
+        }
+        // Parte 2.
+        //10.
+        elementH1.className = "title";
+        //11.
+        for(let i = 0; i < 3; i += 1){
+            let elementH3 = document.getElementsByTagName("h3");
+            elementH3[i].className = "description";
+        }
+        //12.
+        elementMain.removeChild(elementSectionLeft);
+        //13.
+        elementSectionRight.style.marginRight = "auto";
+        //14.
+        const sectionCenterContent = document.getElementsByClassName("center-content")[0];
+        sectionCenterContent.parentNode.style.backgroundColor = "green";
+        //15.
+        elementUl.lastChild.remove();
+        elementLi.lastChild.remove();
+        //the end.
+    </script>
+</body>
+
+</html>
