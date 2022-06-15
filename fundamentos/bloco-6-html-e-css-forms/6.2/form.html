@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="./script.js"></script>
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1 class="display-4 text-muted">TrybeTrip</h1>
+
+    <form class="form-group" action="" id="trybetrip-form">
+        <label for="input-name" class="input-email-text">
+            Nome completo:
+            <input class="form-control" type="text" name="complete-name" id="input-name" required minlength="10" maxlength="40" />
+        </label>
+
+        <label for="input-email" class="input-email-text">
+            Email:
+            <input class="form-control" type="email" name="input-email" id="input-email" required minlength="10" maxlength="50" />
+        </label>
+
+        <section class="section-destinations">
+            <span class="destination-class">Destino preferido:</span>
+            <input  type="radio" id="destination1" className="radios" name="destinations" value="Cidade" required />
+            <label for="destination1" class="destination-class">Cidade</label>
+            <input  type="radio" id="destination2" className="radios" name="destinations" value="Campo" required />
+            <label for="destination2" class="destination-class">Campo</label>
+            <input  type="radio" id="destination3" className="radios" name="destinations" value="Praia" required />
+            <label for="destination3" class="destination-class">Praia</label>
+            <input  type="radio" id="destination4" className="radios" name="destinatios" value="Montanhas" required />
+            <label for="destination4" class="destination-class">Montanhas</label>
+        </section>
+
+        <section class="reasons-section">
+            <label for="reason-to-win" id="reasons">
+                <p>
+                    Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+                </p>
+                <textarea class="form-control" name="reasons" id="reason-to-win" cols="30" rows="10" maxlength="500" required></textarea>
+            </label>
+        </section>
+
+        <section class="best-data-section">
+            <label for="best-data">
+                <p>Qual a melhor data para realizar sua viagem?</p>
+                <input class="form-control" type="date" name="best-data" id="best-data" min="2022-05-31" required />
+            </label>
+        </section>
+
+        <section class="oferts-section">
+            <label for="oferts" id="oferts-label">Gostaria de receber outras incríveis oportunidades oferecidas pela
+                TrybeTrip?
+            </label>
+            <input type="checkbox" name="oferts" id="oferts" />
+            <br />
+            <label for="agreement">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
+                futuros.
+            </label>
+            <input  type="checkbox" name="agreement" id="agreement" required />
+        </section>
+        <button class="btn btn-success" type="submit" id="submit-button" disabled>Enviar</button>
+    </form>
+    <br />
+    <button id="reset-forms-button" class=" btn btn-success">Resetar formulário</button>
+</body>
+
+</html>
